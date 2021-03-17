@@ -1,3 +1,4 @@
+
 package mage.cards.s;
 
 import java.util.UUID;
@@ -5,6 +6,7 @@ import mage.MageInt;
 import mage.abilities.Ability;
 import mage.abilities.common.SimpleStaticAbility;
 import mage.abilities.effects.ContinuousEffectImpl;
+import mage.abilities.keyword.FirstStrikeAbility;
 import mage.abilities.keyword.FlyingAbility;
 import mage.abilities.keyword.LifelinkAbility;
 import mage.cards.CardImpl;
@@ -20,9 +22,13 @@ import mage.game.Game;
 import mage.game.permanent.Permanent;
 import mage.players.Player;
 
-public class SerraSuperAscendant {
+/**
+ *
+ * @author Anthony
+ */
+public final class SerraSuperAscendant extends CardImpl {
 
-    public SerraAscendant(UUID ownerId, CardSetInfo setInfo) {
+    public SerraSuperAscendant(UUID ownerId, CardSetInfo setInfo) {
         super(ownerId,setInfo,new CardType[]{CardType.CREATURE},"{W}");
         this.subtype.add(SubType.HUMAN);
         this.subtype.add(SubType.MONK);
@@ -34,34 +40,34 @@ public class SerraSuperAscendant {
         this.addAbility(LifelinkAbility.getInstance());
 
         // As long as you have 30 or more life, Serra Ascendant gets +5/+5 and has flying.
-        this.addAbility(new SimpleStaticAbility(Zone.BATTLEFIELD, new SerraAscendantEffect()));
+        this.addAbility(new SimpleStaticAbility(Zone.BATTLEFIELD, new SerraSuperAscendantEffect()));
     }
 
-    private SerraAscendant(final SerraAscendant card) {
+    private SerraSuperAscendant(final SerraSuperAscendant card) {
         super(card);
     }
 
     @Override
-    public SerraAscendant copy() {
-        return new SerraAscendant(this);
+    public SerraSuperAscendant copy() {
+        return new SerraSuperAscendant(this);
     }
 
 }
 
-class SerraAscendantEffect extends ContinuousEffectImpl {
+class SerraSuperAscendantEffect extends ContinuousEffectImpl {
 
-    public SerraAscendantEffect() {
+    public SerraSuperAscendantEffect() {
         super(Duration.WhileOnBattlefield, Outcome.BoostCreature);
-        staticText = "As long as you have 30 or more life, {this} gets +5/+5 and has flying";
+        staticText = "As long as you have 30 or more life, {this} gets +7/+7 and has flying and first strike.";
     }
 
-    public SerraAscendantEffect(final SerraAscendantEffect effect) {
+    public SerraSuperAscendantEffect(final SerraSuperAscendantEffect effect) {
         super(effect);
     }
 
     @Override
-    public SerraAscendantEffect copy() {
-        return new SerraAscendantEffect(this);
+    public SerraSuperAscendantEffect copy() {
+        return new SerraSuperAscendantEffect(this);
     }
 
     @Override
@@ -73,13 +79,14 @@ class SerraAscendantEffect extends ContinuousEffectImpl {
                 switch (layer) {
                     case PTChangingEffects_7:
                         if (sublayer == SubLayer.ModifyPT_7c) {
-                            creature.addPower(5);
-                            creature.addToughness(5);
+                            creature.addPower(7);
+                            creature.addToughness(7);
                         }
                         break;
                     case AbilityAddingRemovingEffects_6:
                         if (sublayer == SubLayer.NA) {
                             creature.addAbility(FlyingAbility.getInstance(), source.getSourceId(), game);
+                            creature.addAbility(FirstStrikeAbility.getInstance(), source.getSourceId(), game);
                         }
                         break;
                 }
