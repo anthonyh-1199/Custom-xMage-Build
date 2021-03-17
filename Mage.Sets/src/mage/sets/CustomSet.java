@@ -28,6 +28,8 @@ public final class CustomSet extends ExpansionSet {
         this.ratioBoosterMythic = 8;
         this.maxCardNumberInBooster = 280;
 
+        cards.add(new ExpansionSet.SetCardInfo("Llanowar Ascendant", 2, Rarity.UNCOMMON, mage.cards.l.LlanowarAscendant.class));
+        cards.add(new ExpansionSet.SetCardInfo("Serra's Shaman", 1, Rarity.UNCOMMON, mage.cards.s.SerrasShaman.class));
         cards.add(new ExpansionSet.SetCardInfo("Serra Super Ascendant", 1, Rarity.RARE, mage.cards.s.SerraSuperAscendant.class));
 
     }
