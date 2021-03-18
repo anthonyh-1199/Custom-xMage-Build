@@ -27,8 +27,8 @@ public final class PlayfulPrimate extends CardImpl {
         super(ownerId, setInfo, new CardType[]{CardType.CREATURE}, "{2}{R}{R}");
         this.subtype.add(SubType.APE);
 
-        this.power = new MageInt(3);
-        this.toughness = new MageInt(3);
+        this.power = new MageInt(4);
+        this.toughness = new MageInt(4);
         
         // Trample
         this.addAbility(TrampleAbility.getInstance());
