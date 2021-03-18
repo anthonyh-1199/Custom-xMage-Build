@@ -30,6 +30,7 @@ public final class CustomSet extends ExpansionSet {
 
         cards.add(new ExpansionSet.SetCardInfo("Llanowar Ascendant", 2, Rarity.UNCOMMON, mage.cards.l.LlanowarAscendant.class));
         cards.add(new ExpansionSet.SetCardInfo("Folk Remedies", 4, Rarity.UNCOMMON, mage.cards.f.FolkRemedies.class));
+        cards.add(new ExpansionSet.SetCardInfo("Playful Primate", 6, Rarity.UNCOMMON, mage.cards.p.PlayfulPrimate.class));
         cards.add(new ExpansionSet.SetCardInfo("Serra's Shaman", 3, Rarity.UNCOMMON, mage.cards.s.SerrasShaman.class));
         cards.add(new ExpansionSet.SetCardInfo("Serra Super Ascendant", 1, Rarity.RARE, mage.cards.s.SerraSuperAscendant.class));
         cards.add(new ExpansionSet.SetCardInfo("Simian Chieftan", 5, Rarity.RARE, mage.cards.s.SimianChieftan.class));
