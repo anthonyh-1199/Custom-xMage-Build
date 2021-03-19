@@ -28,7 +28,7 @@ public class PassingMotivation extends CardImpl {
 
         //Creatures you control have haste.
         this.addAbility(new SimpleStaticAbility(Zone.BATTLEFIELD, new GainAbilityControlledEffect(
-                HasteAbility.getInstance(), Duration.WhileOnBattlefield, StaticFilters.FILTER_PERMANENT_CREATURE)));
+                HasteAbility.getInstance(), Duration.WhileOnBattlefield, StaticFilters.FILTER_PERMANENT_CREATURES)));
         
         //At the beginning of your end step, return target creature you control to its owner's hand
         Ability ability = new BeginningOfEndStepTriggeredAbility(new ReturnToHandTargetEffect(), TargetController.YOU, false);

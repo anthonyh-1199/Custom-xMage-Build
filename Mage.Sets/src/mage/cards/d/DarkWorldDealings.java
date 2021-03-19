@@ -20,8 +20,8 @@ public final class DarkWorldDealings extends CardImpl {
 
         // Each player discards a card, loses 1 life, then draws a card.
         this.getSpellAbility().addEffect(new DiscardEachPlayerEffect(1, false).setText("each player discards a card"));
-        this.getSpellAbility().addEffect(new LoseLifeAllPlayersEffect(1).setText("loses 1 life"));
-        this.getSpellAbility().addEffect(new DrawCardAllEffect(1).setText("draws a card"));
+        this.getSpellAbility().addEffect(new LoseLifeAllPlayersEffect(1).setText("and loses 1 life"));
+        this.getSpellAbility().addEffect(new DrawCardAllEffect(1).setText(", then draws a card"));
     }
 
     private DarkWorldDealings(final DarkWorldDealings card) {
