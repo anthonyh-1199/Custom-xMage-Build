@@ -28,6 +28,7 @@ public final class CustomSet extends ExpansionSet {
         this.ratioBoosterMythic = 8;
         this.maxCardNumberInBooster = 280;
 
+        cards.add(new ExpansionSet.SetCardInfo("Dark World Dealings", 12, Rarity.COMMON, mage.cards.d.DarkWorldDealings.class));
         cards.add(new ExpansionSet.SetCardInfo("Dark World Vanguard", 9, Rarity.COMMON, mage.cards.d.DarkWorldVanguard.class));
         cards.add(new ExpansionSet.SetCardInfo("Llanowar Ascendant", 2, Rarity.UNCOMMON, mage.cards.l.LlanowarAscendant.class));
         cards.add(new ExpansionSet.SetCardInfo("Folk Remedies", 4, Rarity.UNCOMMON, mage.cards.f.FolkRemedies.class));
