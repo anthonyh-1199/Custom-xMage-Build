@@ -2,7 +2,6 @@ package mage.cards.m;
 
 import mage.MageInt;
 import mage.abilities.Ability;
-import mage.abilities.common.AttacksEachCombatStaticAbility;
 import mage.abilities.common.SimpleActivatedAbility;
 import mage.abilities.costs.mana.GenericManaCost;
 import mage.abilities.effects.RestrictionEffect;
@@ -20,8 +19,6 @@ import mage.abilities.effects.ContinuousEffect;
 import mage.abilities.effects.ContinuousEffectImpl;
 import mage.abilities.effects.OneShotEffect;
 import mage.players.Player;
-import mage.target.Target;
-import mage.target.TargetPlayer;
 import mage.target.targetpointer.FixedTarget;
 
 
