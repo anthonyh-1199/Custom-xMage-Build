@@ -36,6 +36,7 @@ public final class CustomSet extends ExpansionSet {
         cards.add(new ExpansionSet.SetCardInfo("Lord of the Dark World", 10, Rarity.RARE, mage.cards.l.LordOfTheDarkWorld.class));
         cards.add(new ExpansionSet.SetCardInfo("Mercenary", 11, Rarity.UNCOMMON, mage.cards.m.Mercenary.class));
         cards.add(new ExpansionSet.SetCardInfo("Monkey Kingpin", 7, Rarity.RARE, mage.cards.m.MonkeyKingpin.class));
+        cards.add(new ExpansionSet.SetCardInfo("Passing Motivation", 13, Rarity.RARE, mage.cards.p.PassingMotivation.class));
         cards.add(new ExpansionSet.SetCardInfo("Playful Primate", 6, Rarity.UNCOMMON, mage.cards.p.PlayfulPrimate.class));
         cards.add(new ExpansionSet.SetCardInfo("Serra's Shaman", 3, Rarity.UNCOMMON, mage.cards.s.SerrasShaman.class));
         cards.add(new ExpansionSet.SetCardInfo("Serra Super Ascendant", 1, Rarity.RARE, mage.cards.s.SerraSuperAscendant.class));
