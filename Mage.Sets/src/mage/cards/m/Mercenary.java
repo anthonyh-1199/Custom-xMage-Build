@@ -15,6 +15,7 @@ import mage.game.permanent.Permanent;
 import java.util.Objects;
 import java.util.UUID;
 import mage.abilities.Mode;
+import mage.abilities.common.SimpleStaticAbility;
 import mage.abilities.effects.ContinuousEffect;
 import mage.abilities.effects.ContinuousEffectImpl;
 import mage.abilities.effects.OneShotEffect;
@@ -47,8 +48,8 @@ public final class Mercenary extends CardImpl {
         this.addAbility(simpleAbility);
         
         // Mercenary can’t attack its owner.
-        Ability ability = new AttacksEachCombatStaticAbility();
-        ability.addEffect(new MercenaryAttackRestrictionEffect());
+        SimpleStaticAbility ability = new SimpleStaticAbility(Zone.BATTLEFIELD,
+            new MercenaryAttackRestrictionEffect());
         this.addAbility(ability);
     }
 
@@ -81,16 +82,12 @@ class MercenaryChangeControlEffect extends OneShotEffect {
 
     @Override
     public boolean apply(Game game, Ability source) {
-        Target target = new TargetPlayer();
-        target.setNotTarget(true);
         Player controller = game.getPlayer(source.getControllerId());
         if (controller != null) {
-            if (controller.chooseTarget(outcome, target, source, game)) {
-                ContinuousEffect effect = new MercenaryGainControlEffect(Duration.Custom, target.getFirstTarget());
-                effect.setTargetPointer(new FixedTarget(source.getSourceId()));
-                game.addEffect(effect, source);
-                return true;
-            }
+            ContinuousEffect effect = new MercenaryGainControlEffect(Duration.Custom, source.getControllerId());
+            effect.setTargetPointer(new FixedTarget(source.getSourceId()));
+            game.addEffect(effect, source);
+            return true;
         }
         return false;
     }
@@ -138,7 +135,7 @@ class MercenaryAttackRestrictionEffect extends RestrictionEffect {
 
     MercenaryAttackRestrictionEffect() {
         super(Duration.WhileOnBattlefield);
-        staticText = "and can't attack its owner.";
+        staticText = "{this} can't attack its owner.";
     }
 
     private MercenaryAttackRestrictionEffect(final MercenaryAttackRestrictionEffect effect) {
