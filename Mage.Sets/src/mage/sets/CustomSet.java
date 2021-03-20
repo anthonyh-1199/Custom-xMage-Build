@@ -28,7 +28,7 @@ public final class CustomSet extends ExpansionSet {
         this.ratioBoosterMythic = 8;
         this.maxCardNumberInBooster = 280;
 
-        cards.add(new ExpansionSet.SetCardInfo("Aggressive Ooze", 12, Rarity.RARE, mage.cards.a.AggressiveOoze.class));
+        cards.add(new ExpansionSet.SetCardInfo("Aggressive Ooze", 16, Rarity.RARE, mage.cards.a.AggressiveOoze.class));
         cards.add(new ExpansionSet.SetCardInfo("Dark World Dealings", 12, Rarity.COMMON, mage.cards.d.DarkWorldDealings.class));
         cards.add(new ExpansionSet.SetCardInfo("Dark World Vanguard", 9, Rarity.COMMON, mage.cards.d.DarkWorldVanguard.class));
         cards.add(new ExpansionSet.SetCardInfo("Llanowar Ascendant", 2, Rarity.UNCOMMON, mage.cards.l.LlanowarAscendant.class));
@@ -43,7 +43,7 @@ public final class CustomSet extends ExpansionSet {
         cards.add(new ExpansionSet.SetCardInfo("Serra's Shaman", 3, Rarity.UNCOMMON, mage.cards.s.SerrasShaman.class));
         cards.add(new ExpansionSet.SetCardInfo("Serra Super Ascendant", 1, Rarity.RARE, mage.cards.s.SerraSuperAscendant.class));
         cards.add(new ExpansionSet.SetCardInfo("Simian Chieftan", 5, Rarity.RARE, mage.cards.s.SimianChieftan.class));
-        cards.add(new ExpansionSet.SetCardInfo("Tactical Disadvantage", 5, Rarity.RARE, mage.cards.t.TacticalDisadvantage.class));
+        cards.add(new ExpansionSet.SetCardInfo("Tactical Disadvantage", 15, Rarity.RARE, mage.cards.t.TacticalDisadvantage.class));
 
     }
 

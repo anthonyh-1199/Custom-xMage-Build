@@ -31,7 +31,7 @@ public final class Mercenary extends CardImpl {
         super(ownerId, setInfo, new CardType[]{CardType.CREATURE}, "{2}{B}{B}");
 
         this.subtype.add(SubType.HUMAN);
-        this.subtype.add(SubType.SOLDIER);
+        this.subtype.add(SubType.MERCENARY);
         this.power = new MageInt(5);
         this.toughness = new MageInt(5);
 
