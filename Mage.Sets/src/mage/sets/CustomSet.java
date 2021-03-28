@@ -30,6 +30,7 @@ public final class CustomSet extends ExpansionSet {
 
         cards.add(new ExpansionSet.SetCardInfo("Aggressive Ooze", 16, Rarity.RARE, mage.cards.a.AggressiveOoze.class));
         cards.add(new ExpansionSet.SetCardInfo("Bloody Fortune-teller", 17, Rarity.COMMON, mage.cards.b.BloodyFortuneteller.class));
+        cards.add(new ExpansionSet.SetCardInfo("Bolt the Bird", 18, Rarity.RARE, mage.cards.b.BoltTheBird.class));
         cards.add(new ExpansionSet.SetCardInfo("Dark World Dealings", 12, Rarity.COMMON, mage.cards.d.DarkWorldDealings.class));
         cards.add(new ExpansionSet.SetCardInfo("Dark World Vanguard", 9, Rarity.COMMON, mage.cards.d.DarkWorldVanguard.class));
         cards.add(new ExpansionSet.SetCardInfo("Llanowar Ascendant", 2, Rarity.UNCOMMON, mage.cards.l.LlanowarAscendant.class));
